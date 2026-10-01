@@ -27,22 +27,22 @@ mongoose
 //     res.send('hello backend')
 // });
 
-// app.get('/api/hello',(req,res)=>{
-//     res.json({message: 'from api hello'});
-// });
+app.get('/api/hello',(req,res)=>{
+    res.json({message: 'from api hello'});
+});
 
 // app.get('/api/about',(req,res)=>{
 //     res.json({name:'saba', role : 'frontend developer'})
 // });
 
-// let notes = [
-//   { id: 1, title: 'saba', description: 'first note' },
-//   { id: 2, title: 'ahmad', description: 'second note' },
-// ];
+let notes = [
+  { id: 1, title: 'saba', description: 'first note' },
+  { id: 2, title: 'ahmad', description: 'second note' },
+];
 
-// app.get('/api/notes', (req, res) => {
-//   res.json(notes);
-// });
+app.get('/api/notes', (req, res) => {
+  res.json(notes);
+});
 
 app.get('/api/notes', async (req, res) => {
   const allNotes = await Note.find();
