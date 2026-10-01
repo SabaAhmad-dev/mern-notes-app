@@ -118,14 +118,22 @@ app.put('/api/notes/:id', async (req, res) => {
   }
 });
 
-app.listen(3000, ()=>{
-    console.log('server runing')
-});
+
+module.exports = app;
+
+if (require.main === module) {
+  app.listen(3000, () => {
+    console.log('server runing');
+  });
+}
+
+
+// app.listen(3000, ()=>{
+//     console.log('server runing')
+// });
 
 
 
 
 
 
-// sabaahmad3965_db_user
-// Djn6h4fxothXRzlI
